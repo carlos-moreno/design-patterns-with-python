@@ -7,13 +7,13 @@ class Borg:
         return obj
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     b = Borg()
     b1 = Borg()
     b.x = 4
     b1.y = 10
 
-    print(f'Borg Object b: {b}')
-    print(f'Borg Object b1: {b1}')
-    print(f'Object State b: {b.__dict__}')
-    print(f'Object State b1: {b1.__dict__}')
+    print(f"Borg Object b: {b}")
+    print(f"Borg Object b1: {b1}")
+    print(f"Object State b: {b.__dict__}")
+    print(f"Object State b1: {b1.__dict__}")

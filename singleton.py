@@ -1,6 +1,6 @@
 class Singleton:
     def __new__(cls):
-        if not hasattr(cls, 'instance'):
+        if not hasattr(cls, "instance"):
             cls.instance = super(Singleton, cls).__new__(cls)
         return cls.instance
 
@@ -10,9 +10,9 @@ class SingletonLazyInstantiation:
 
     def __init__(self):
         if not SingletonLazyInstantiation.__instance:
-            print('__init__method called.')
+            print("__init__method called.")
         else:
-            print(f'Instance already created: {self.getInstance()}')
+            print(f"Instance already created: {self.getInstance()}")
 
     @classmethod
     def getInstance(cls):
@@ -34,20 +34,20 @@ class Logger(metaclass=MetaSingleton):
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Singleton()
-    print(f'Object created ==> {s}')
+    print(f"Object created ==> {s}")
 
     s1 = Singleton()
-    print(f'Object created ==> {s1}')
+    print(f"Object created ==> {s1}")
 
-    print('\n##### Singleton Lazy Instantiation #####')
+    print("\n##### Singleton Lazy Instantiation #####")
     s_lazy = SingletonLazyInstantiation()
-    print(f'Object created ==> {SingletonLazyInstantiation.getInstance()}')
+    print(f"Object created ==> {SingletonLazyInstantiation.getInstance()}")
 
     s1_lazy = SingletonLazyInstantiation()
 
-    print('\n##### Meta Class Singleton #####')
+    print("\n##### Meta Class Singleton #####")
     logger1 = Logger()
     logger2 = Logger()
     print(logger1, logger2)
